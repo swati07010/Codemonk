@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}My Website{% endblock %}</title>
+    <link rel="stylesheet"href="/static/base.css">
+  </head>
+  <body>
+    <nav>
+      <div class="heading">
+        <h1 class="heading">Welcome To this page<h1>
+        <a href="{% url 'signup' %}">Signup</a>
+        <a href="{% url 'login' %}">Login</a>
+        </div>
+      
+    </nav>
+    <div>{% block content %} {% endblock %}</div>
+  </body>
+</html>

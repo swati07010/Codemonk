@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taketea</title>
+    <link rel="stylesheet"href="/static/search.css">
+  </head>
+  <body>
+    <div class="conatiner">
+    <form method="POST">
+        {%  csrf_token  %}
+        <h3>Enter your Paragraph</h3>
+      <textarea type="text" class="inputnum" id="num1" name="num1"  class="form-control">{{ request.POST.num1 }}</textarea>
+      <h3>Enter your Word you want to found </h3>
+      <input type="text" class="inputnum1" name="num2"  />
+      <button type="submit" class="submit">Submit</button>
+      
+      <input type="text" class="output1" value="{{message}}" />
+    </div>
+   </form>
+   </div>
+  </body>
+</html>
